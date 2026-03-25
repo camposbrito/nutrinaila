@@ -1,0 +1,70 @@
+# ============================================
+# robots.txt - NutriNaila
+# ============================================
+# Este arquivo define quais partes do site 
+# podem ser rastreadas pelos motores de busca
+# ============================================
+
+# Permite rastreamento completo para todos os bots
+User-agent: *
+Allow: /
+
+# Diretórios que não devem ser rastreados
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Arquivos específicos para bloquear
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.log$
+
+# Sitemap location
+Sitemap: https://nutrinaila.com.br/sitemap.xml
+
+# ============================================
+# Regras específicas para Google
+# ============================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# ============================================
+# Regras específicas para Bing
+# ============================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# ============================================
+# Regras específicas para Facebook
+# ============================================
+User-agent: facebookexternalhit
+Allow: /
+
+# ============================================
+# Regras específicas para Twitter
+# ============================================
+User-agent: Twitterbot
+Allow: /
+
+# ============================================
+# Regras específicas para LinkedIn
+# ============================================
+User-agent: LinkedInBot
+Allow: /
+
+# ============================================
+# Regras específicas para WhatsApp
+# ============================================
+User-agent: WhatsApp
+Allow: /
+
+# ============================================
+# Notas:
+# - Crawl-delay define o intervalo mínimo 
+#   entre requisições (em segundos)
+# - O sitemap.xml está na raiz do domínio
+# ============================================
