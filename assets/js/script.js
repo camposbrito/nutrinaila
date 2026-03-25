@@ -435,16 +435,74 @@
     // ============================================
     // DETECÇÃO DE REDUÇÃO DE MOVIMENTO
     // ============================================
-    
+
     function respectReducedMotion() {
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        
+
         if (mediaQuery.matches) {
             document.documentElement.style.setProperty('--transition-base', '0ms');
             document.documentElement.style.setProperty('--transition-fast', '0ms');
             document.documentElement.style.setProperty('--transition-slow', '0ms');
             document.documentElement.style.scrollBehavior = 'auto';
         }
+    }
+
+    // ============================================
+    // ANIMAÇÃO DE CONTAGEM (STATS)
+    // ============================================
+
+    function initCounterAnimation() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        if (statNumbers.length === 0) return;
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const animateCounter = (element) => {
+            const text = element.textContent.trim();
+            const hasPlus = text.includes('+');
+            const hasNumbers = /\d/.test(text);
+
+            if (!hasNumbers) return;
+
+            // Extrai números do texto
+            const match = text.match(/(\d+)/);
+            if (!match) return;
+
+            const finalValue = parseInt(match[1]);
+            const prefix = text.replace(/\d+/g, '').trim();
+            const duration = 2000; // 2 segundos
+            const step = finalValue / (duration / 16); // 60fps
+            let currentValue = 0;
+
+            const updateCounter = () => {
+                currentValue += step;
+                if (currentValue < finalValue) {
+                    const displayValue = Math.floor(currentValue);
+                    element.textContent = prefix + displayValue + (hasPlus ? '+' : '');
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = text;
+                }
+            };
+
+            updateCounter();
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateCounter(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        statNumbers.forEach(stat => counterObserver.observe(stat));
     }
 
     // ============================================
@@ -479,7 +537,8 @@
         initContactForm();
         initAccordion();
         initWebShare();
-        
+        initCounterAnimation();
+
         // Scroll animations após carregamento inicial
         setTimeout(() => {
             initScrollAnimations();
