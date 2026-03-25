@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- ============================================
+         PÁGINA PRINCIPAL
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- ============================================
+         PÁGINAS DE BLOG
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/blog/</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/blog/colageno-beneficios.html</loc>
+        <lastmod>2026-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://nutrinaila.com.br/assets/images/blog/colageno.webp</image:loc>
+            <image:title>Colágeno em pó sendo adicionado a uma bebida</image:title>
+            <image:caption>Benefícios do colágeno para saúde</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/blog/alimentacao-intuitiva.html</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://nutrinaila.com.br/assets/images/blog/alimentacao-intuitiva.webp</image:loc>
+            <image:title>Prato colorido e equilibrado com alimentos naturais</image:title>
+            <image:caption>Alimentação intuitiva e consciente</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/blog/dieta-anti-inflamatoria.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://nutrinaila.com.br/assets/images/blog/dieta-anti-inflamatoria.webp</image:loc>
+            <image:title>Alimentos anti-inflamatórios como frutas vermelhas e castanhas</image:title>
+            <image:caption>Dieta anti-inflamatória para saúde</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- ============================================
+         PÁGINAS DE SERVIÇOS (URLs amigáveis)
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/emagrecimento</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/diabetes</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/hipotireoidismo</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/nutricao-funcional</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/sop</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://nutrinaila.com.br/servicos/nutricao-oncologica</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ============================================
+         PÁGINA SOBRE
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/sobre</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ============================================
+         PÁGINA DE CONTATO
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/contato</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ============================================
+         PÁGINA DE DEPOIMENTOS
+         ============================================ -->
+    <url>
+        <loc>https://nutrinaila.com.br/depoimentos</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>
