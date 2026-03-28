@@ -234,43 +234,55 @@
         <section id="inicio" class="hero-bg text-white min-h-screen flex items-center" aria-labelledby="heroTitle">
             <!-- Slider Background -->
             <div class="hero-slider">
-                <div class="hero-slide active" style="background-image: url('assets/images/nutricionista-hero.webp');"></div>
-                <div class="hero-slide" style="background-image: url('../assets/images/006.jpeg');"></div>
-                <div class="hero-slide" style="background-image: url('../assets/images/004.jpeg');"></div>
+                <!-- Slide 1: Endocrinologia -->
+                <div class="hero-slide active" style="background-image: url('assets/images/nutricionista-hero.webp');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up show">Nutrição Clínica em <span class="highlight-white">Endocrinologia</span></h1>
+                            <p class="hero-text-slide fade-up show delay-200">Equilíbrio metabólico e hormonal com acompanhamento especializado em Curitiba.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up show delay-400">Agendar Consulta</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2: Emagrecimento -->
+                <div class="hero-slide" style="background-image: url('../assets/images/006.jpeg');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up">Emagrecimento com <span class="highlight-white">Estratégia Real</span></h1>
+                            <p class="hero-text-slide fade-up delay-200">Resultados sustentáveis e clareza no seu plano alimentar personalizado.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up delay-400">Conhecer o Método</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3: Saúde Metabólica -->
+                <div class="hero-slide" style="background-image: url('../assets/images/004.jpeg');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up">Controle da Glicemia e <span class="highlight-white">Vitalidade</span></h1>
+                            <p class="hero-text-slide fade-up delay-200">Melhore sua saúde metabólica e recupere seu bem-estar diário.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up delay-400">Solicitar Atendimento</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <!-- Conteúdo -->
-            <div class="max-w-5xl mx-auto px-6 hero-content-wrapper">
-                <h1 id="heroTitle" class="fade-up show">
-                    Transforme sua saúde através de uma alimentação equilibrada
-                </h1>
-                
-                <p id="heroText" class="fade-up show delay-200">
-                    Nutrição personalizada especializada em endocrinologia, emagrecimento saudável 
-                    e qualidade de vida. Atendimento humanizado em Curitiba.
-                </p>
-                
-                <a href="https://wa.me/554191930937?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." 
-                   class="hero-cta-btn fade-up show delay-400"
-                   data-ga-event="click_whatsapp_hero"
-                   data-pixel-event="Lead">
-                    Solicitar Atendimento
-                </a>
-                
-                <!-- Navegação -->
-                <div class="hero-nav fade-up show delay-600">
-                    <button id="heroPrev" class="hero-nav-btn" aria-label="Slide anterior">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6"/>
-                        </svg>
-                    </button>
-                    <button id="heroNext" class="hero-nav-btn" aria-label="Próximo slide">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-                    </button>
-                    <div id="heroDots" class="hero-dots">
-                        <!-- Dots gerados via JavaScript -->
+            <!-- Navegação e Controles -->
+            <div class="hero-controls" style="position: absolute; bottom: var(--spacing-12); left: 0; width: 100%; z-index: 10;">
+                <div class="container">
+                    <div class="hero-nav fade-up show delay-600">
+                        <button id="heroPrev" class="hero-nav-btn" aria-label="Slide anterior">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button id="heroNext" class="hero-nav-btn" aria-label="Próximo slide">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                        <div id="heroDots" class="hero-dots">
+                            <!-- Dots gerados via JavaScript -->
+                        </div>
                     </div>
                 </div>
             </div>

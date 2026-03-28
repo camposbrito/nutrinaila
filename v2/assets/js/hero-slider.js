@@ -1,6 +1,6 @@
 /**
  * ============================================
- * NutriNaila v2 - Hero Slider
+ * NutriNaila v2 - Hero Slider (Updated)
  * ============================================
  */
 
@@ -11,7 +11,7 @@
         slides: [],
         currentSlide: 0,
         autoplayInterval: null,
-        autoplayDelay: 5000, // 5 segundos
+        autoplayDelay: 6000, // 6 segundos
 
         init() {
             this.slides = document.querySelectorAll('.hero-slide');
@@ -21,7 +21,6 @@
             this.updateSlider();
             this.addEventListeners();
             this.startAutoplay();
-            this.animateContent();
         },
 
         createDots() {
@@ -41,33 +40,27 @@
         updateSlider() {
             // Atualiza slides
             this.slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === this.currentSlide);
+                const isActive = index === this.currentSlide;
+                slide.classList.toggle('active', isActive);
+                
+                // Gerencia animações internas (fade-up)
+                const animatedElements = slide.querySelectorAll('.fade-up');
+                animatedElements.forEach(el => {
+                    if (isActive) {
+                        // Força reinício da animação
+                        el.classList.remove('show');
+                        void el.offsetWidth; // Force reflow
+                        el.classList.add('show');
+                    } else {
+                        el.classList.remove('show');
+                    }
+                });
             });
 
             // Atualiza dots
             const dots = document.querySelectorAll('.hero-dot');
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === this.currentSlide);
-            });
-
-            // Anima conteúdo
-            this.animateContent();
-        },
-
-        animateContent() {
-            const heroTitle = document.getElementById('heroTitle');
-            const heroText = document.getElementById('heroText');
-            const heroCta = document.querySelector('.hero-cta-btn');
-            const heroNav = document.querySelector('.hero-nav');
-
-            // Remove classe show para reiniciar animação
-            [heroTitle, heroText, heroCta, heroNav].forEach(el => {
-                if (el) {
-                    el.classList.remove('show');
-                    // Força reflow
-                    void el.offsetWidth;
-                    el.classList.add('show');
-                }
             });
         },
 
@@ -82,6 +75,7 @@
         },
 
         goToSlide(index) {
+            if (this.currentSlide === index) return;
             this.currentSlide = index;
             this.updateSlider();
             this.resetAutoplay();
@@ -113,26 +107,27 @@
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
                     this.prevSlide();
+                    this.resetAutoplay();
                 });
             }
 
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
                     this.nextSlide();
+                    this.resetAutoplay();
                 });
-            }
-
-            // Pause no hover
-            const hero = document.querySelector('.hero-bg');
-            if (hero) {
-                hero.addEventListener('mouseenter', () => this.stopAutoplay());
-                hero.addEventListener('mouseleave', () => this.startAutoplay());
             }
 
             // Teclado
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') this.prevSlide();
-                if (e.key === 'ArrowRight') this.nextSlide();
+                if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                    this.resetAutoplay();
+                }
+                if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                    this.resetAutoplay();
+                }
             });
 
             // Touch/Swipe
@@ -158,16 +153,15 @@
 
         handleSwipe(startX, endX) {
             const diff = startX - endX;
-            const threshold = 50; // Mínimo de pixels para considerar swipe
+            const threshold = 50;
 
             if (Math.abs(diff) > threshold) {
                 if (diff > 0) {
-                    // Swipe para esquerda - próximo slide
                     this.nextSlide();
                 } else {
-                    // Swipe para direita - slide anterior
                     this.prevSlide();
                 }
+                this.resetAutoplay();
             }
         }
     };
@@ -178,8 +172,5 @@
     } else {
         HeroSlider.init();
     }
-
-    // Expõe globalmente se necessário
-    window.HeroSlider = HeroSlider;
 
 })();
