@@ -49,6 +49,9 @@
     <!-- CSS Principal -->
     <link rel="stylesheet" href="assets/css/style.css">
     
+    <!-- Hero Slider CSS -->
+    <link rel="stylesheet" href="assets/css/hero-slider.css">
+    
     <!-- Schema.org - LocalBusiness + Person -->
     <script type="application/ld+json">
     {
@@ -172,116 +175,116 @@
     <!-- Skip Link para acessibilidade -->
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
     
-    <!-- Header Fixo -->
-    <header class="header" role="banner">
-        <div class="container header-container">
-            <a href="/" class="logo" aria-label="Naila Gomes Nutricionista - Página Inicial">
-                <img src="assets/images/Logotipo vertical - sem fundo (2)(1).png" 
-                     alt="Naila Gomes Nutricionista - Logo"
-                     width="180"
-                     height="200"
-                     class="logo-image"
-                     fetchpriority="high">
-            </a>
-            
-            <nav class="nav" role="navigation" aria-label="Menu principal">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-            
-            <a href="https://wa.me/554191930937?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." 
-               class="btn btn-primary header-cta" 
-               aria-label="Agendar consulta pelo WhatsApp"
-               data-ga-event="click_whatsapp_header"
-               data-pixel-event="Lead">
-                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                Agendar Consulta
-            </a>
-            
-            <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-        </div>
-        
-        <!-- Menu Mobile -->
-        <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobile">
-            <ul class="mobile-nav-list">
-                <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
-                <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
-                <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
-                <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
-                <li><a href="#blog" class="mobile-nav-link">Blog</a></li>
-                <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
-            </ul>
-        </div>
-    </header>
-    
     <main id="main-content" role="main">
-        <!-- Hero Section -->
-        <section id="inicio" class="hero" aria-labelledby="hero-title">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="hero-badge animate-fade-in-up">Nutrição com Ciência e Humanização</span>
-                    <h1 id="hero-title" class="hero-title animate-fade-in-up delay-200">
-                        Transforme sua saúde através de uma
-                        <span class="highlight">alimentação equilibrada</span>
-                    </h1>
-                    <p class="hero-subtitle animate-fade-in-up delay-300">
-                        Nutrição personalizada especializada em endocrinologia, emagrecimento saudável 
-                        e qualidade de vida. Atendimento humanizado em Curitiba.
-                    </p>
-                    <div class="hero-cta-group animate-fade-in-up delay-400">
-                        <a href="https://wa.me/554191930937?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." 
-                           class="btn btn-primary btn-lg"
-                           data-ga-event="click_whatsapp_hero"
-                           data-pixel-event="Lead">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                            </svg>
-                            Agendar Consulta
-                        </a>
-                        <a href="#servicos" class="btn btn-outline btn-lg">Conheça os Serviços</a>
-                    </div>
-                    <div class="hero-stats animate-fade-in-up delay-500">
-                        <div class="stat-item">
-                            <span class="stat-number">+10</span>
-                            <span class="stat-label">Anos de Experiência</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">+5000</span>
-                            <span class="stat-label">Pacientes Atendidos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">CRN-8</span>
-                            <span class="stat-label">1557</span>
+        <!-- Hero Section com Slider -->
+        <section id="inicio" class="hero-bg text-white min-h-screen" aria-labelledby="heroTitle">
+            <!-- Slider Background e Conteúdo -->
+            <div class="hero-slider">
+                <!-- Slide 1: Endocrinologia -->
+                <div class="hero-slide active" style="background-image: url('assets/images/nutricionista-hero.webp');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up show">Nutrição Clínica em <span class="highlight-white">Endocrinologia</span></h1>
+                            <p class="hero-text-slide fade-up show delay-200">Equilíbrio metabólico e hormonal com acompanhamento especializado.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up show delay-400">Agendar Consulta</a>
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/images/nutricionista-hero.webp" 
-                             alt="Naila Gomes - Nutricionista especializada em endocrinologia e nutrição funcional"
-                             width="550"
-                             height="700"
-                             loading="eager"
-                             fetchpriority="high"
-                             style="object-fit: cover;"
-                             class="animate-fade-in-right">
-                        <div class="hero-image-decoration animate-pulse"></div>
+                <!-- Slide 2: Emagrecimento -->
+                <div class="hero-slide" style="background-image: url('../assets/images/006.jpeg');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up">Emagrecimento com <span class="highlight-white">Estratégia Real</span></h1>
+                            <p class="hero-text-slide fade-up delay-200">Resultados sustentáveis e clareza no seu plano alimentar.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up delay-400">Conhecer o Método</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3: Saúde Metabólica -->
+                <div class="hero-slide" style="background-image: url('../assets/images/004.jpeg');">
+                    <div class="hero-content-inner">
+                        <div class="container">
+                            <h1 class="hero-title-slide fade-up">Controle da Glicemia e <span class="highlight-white">Vitalidade</span></h1>
+                            <p class="hero-text-slide fade-up delay-200">Melhore sua saúde metabólica e recupere seu bem-estar.</p>
+                            <a href="https://wa.me/554191930937" class="hero-cta-btn-slide fade-up delay-400">Solicitar Atendimento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navegação Global -->
+            <div class="hero-controls">
+                <div class="container">
+                    <div class="hero-nav fade-up show delay-600">
+                        <button id="heroPrev" class="hero-nav-btn" aria-label="Slide anterior">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button id="heroNext" class="hero-nav-btn" aria-label="Próximo slide">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                        <div id="heroDots" class="hero-dots"></div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Header Fixo (aparece após o hero) -->
+        <header class="header" role="banner">
+            <div class="container header-container">
+                <a href="/" class="logo" aria-label="Naila Gomes Nutricionista - Página Inicial">
+                    <img src="assets/images/Logotipo vertical - sem fundo (2)(1).png" 
+                         alt="Naila Gomes Nutricionista - Logo"
+                         width="180"
+                         height="200"
+                         class="logo-image"
+                         fetchpriority="high">
+                </a>
+                
+                <nav class="nav" role="navigation" aria-label="Menu principal">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://wa.me/554191930937?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." 
+                   class="btn btn-primary header-cta" 
+                   aria-label="Agendar consulta pelo WhatsApp"
+                   data-ga-event="click_whatsapp_header"
+                   data-pixel-event="Lead">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\"/>
+                    </svg>
+                    Agendar Consulta
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobile">
+                <ul class="mobile-nav-list">
+                    <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+                    <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+                    <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+                    <li><a href="#blog" class="mobile-nav-link">Blog</a></li>
+                    <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </header>
         
         <!-- Sobre Section -->
         <section id="sobre" class="section about" aria-labelledby="about-title">
@@ -448,7 +451,7 @@
                         </div>
                         <h3 class="service-title">SOP e Saúde Hormonal</h3>
                         <p class="service-description">
-                            Manejo nutricional da Síndrome dos Ovários Policísticos 
+                            Manejo nutricional da Síndrome dos Ovários Policísticos
                             e desequilíbrios hormonais femininos.
                         </p>
                         <ul class="service-features">
@@ -457,10 +460,9 @@
                             <li>Fertilidade e saúde</li>
                         </ul>
                     </article>
-                </div>
-            </div>
-        </section>
-        
+                    </div>
+                    </div>
+                    </section>        
         <!-- Diferenciais Section -->
         <section class="section philosophy" aria-labelledby="philosophy-title">
             <div class="container philosophy-container">
@@ -962,5 +964,8 @@
     
     <!-- JavaScript Principal -->
     <script src="assets/js/script.js" defer></script>
+    
+    <!-- Hero Slider -->
+    <script src="assets/js/hero-slider.js" defer></script>
 </body>
 </html>
