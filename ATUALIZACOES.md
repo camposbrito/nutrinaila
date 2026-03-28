@@ -46,7 +46,7 @@
 - **Uso:** Seção principal (hero)
 
 ### Seção Sobre
-- **Arquivo:** `468986912_17935102457956165_6856070437869269119_n.jpg`
+- **Arquivo:** `004.jpeg`
 - **Descrição:** Selfie com jaleco branco "Naila L. Gomes Nutricionista"
 - **Uso:** Seção "Sobre Mim"
 

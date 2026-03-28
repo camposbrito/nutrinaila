@@ -1,0 +1,210 @@
+/* ============================================
+   NutriNaila v4 - Hero Slider Styles
+   ============================================ */
+
+/* Hero com Background Image */
+.hero-bg {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--color-gray-900);
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Conteúdo Interno do Slide */
+.hero-content-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 var(--container-padding);
+}
+
+.hero-title-slide {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-6);
+    color: #ffffff;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text-slide {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-10);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+/* Botão CTA do Slide */
+.hero-cta-btn-slide {
+    display: inline-block;
+    background-color: var(--color-primary-600);
+    color: #ffffff;
+    padding: var(--spacing-4) var(--spacing-10);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-lg);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-cta-btn-slide:hover {
+    background-color: var(--color-primary-700);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2xl);
+    color: #ffffff;
+}
+
+/* Destaque Branco */
+.highlight-white {
+    color: var(--color-primary-200);
+    position: relative;
+    display: inline;
+}
+
+/* Controles do Slider */
+.hero-controls {
+    position: absolute;
+    bottom: var(--spacing-12);
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.hero-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-6);
+}
+
+.hero-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.hero-nav-btn:hover {
+    background-color: #ffffff;
+    color: var(--color-primary-600);
+    border-color: #ffffff;
+    transform: scale(1.1);
+}
+
+.hero-dots {
+    display: flex;
+    gap: var(--spacing-3);
+    align-items: center;
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: 0;
+}
+
+.hero-dot:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-dot.active {
+    background-color: #ffffff;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animações */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-200 { transition-delay: 0.2s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* Sticky Header Adjustments */
+.header-sticky {
+    position: sticky;
+    top: 0;
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title-slide {
+        font-size: 2.5rem;
+    }
+    .hero-text-slide {
+        font-size: 1.1rem;
+    }
+    .hero-controls {
+        bottom: var(--spacing-8);
+    }
+}
