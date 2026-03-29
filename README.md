@@ -91,9 +91,9 @@ Pelo seu Pixel ID do Facebook.
 
 ### 3. Número do WhatsApp
 
-O WhatsApp já está configurido como **(41) 91930-937**. Se precisar alterar, edite todos os arquivos HTML e substitua:
+O WhatsApp já está configurado como **(41) 3222-0108**. Se precisar alterar, edite todos os arquivos HTML e substitua:
 ```
-554191930937
+554132220108
 ```
 
 ### 4. Email
@@ -106,7 +106,7 @@ As seguintes imagens já estão disponíveis em `assets/images/`:
 
 | Arquivo | Status | Descrição |
 |---------|--------|-----------|
-| `nutricionista-hero.webp` | ✅ Incluída | Foto principal da hero (mulher de blazer verde) |
+| `017.jpeg` | ✅ Incluída | Foto principal da hero (mulher de blazer verde) |
 | `sobre-nutricionista.webp` | ✅ Incluída | Foto sentada na cadeira (seção sobre) |
 | `Logotipo vertical - sem fundo (2)(1).png` | ✅ Incluída | Logo oficial |
 

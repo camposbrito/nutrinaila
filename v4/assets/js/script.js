@@ -12,7 +12,7 @@
     // CONFIGURAÇÃO
     // ============================================
     const CONFIG = {
-        whatsappNumber: '554191930937',
+        whatsappNumber: '554132220108',
         gaTrackingId: 'G-XXXXXXXXXX',
         pixelId: 'XXXXXXXXXXXXXXX',
         scrollThreshold: 50,

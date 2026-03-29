@@ -9,8 +9,7 @@
 ### Contato
 | Campo | Valor |
 |-------|-------|
-| **WhatsApp** | (41) 91930-937 |
-| **Telefone** | (41) 3222-0108 |
+| **WhatsApp/Fixo** | (41) 3222-0108 |
 | **Email** | nutri.nailagomes@gmail.com |
 | **Instagram** | @nutri.nailagomes |
 | **CRN-8** | 1557 |
@@ -41,7 +40,7 @@
 ## 📸 IMAGENS UTILIZADAS
 
 ### Hero Section (Página Principal)
-- **Arquivo:** `nutricionista-hero.webp`
+- **Arquivo:** `017.jpeg`
 - **Descrição:** Mulher de blazer verde apontando para tablet com "NUTRIÇÃO"
 - **Uso:** Seção principal (hero)
 
@@ -87,7 +86,7 @@ Nova seção adicionada entre "Serviços" e "Diferenciais":
 - ✅ `assets/css/blog.css` - Sem alterações
 
 ### JavaScript
-- ✅ `assets/js/script.js` - WhatsApp atualizado para 554191930937
+- ✅ `assets/js/script.js` - WhatsApp atualizado para 554132220108
 
 ### Configuração
 - ✅ `site.webmanifest` - Nome e cor atualizados
@@ -156,7 +155,7 @@ NutriNaila/
 │   ├── js/
 │   │   └── script.js           ✅ Atualizado
 │   └── images/
-│       ├── nutricionista-hero.webp        ✅ Em uso
+│       ├── 017.jpeg        ✅ Em uso
 │       ├── sobre-nutricionista.webp       ✅ Backup
 │       ├── Logotipo vertical*.png         ✅ Em uso
 │       ├── 468986912_*.jpg                ✅ Em uso (Sobre)
