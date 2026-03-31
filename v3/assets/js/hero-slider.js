@@ -12,6 +12,7 @@
         currentSlide: 0,
         autoplayInterval: null,
         autoplayDelay: 6000, // 6 segundos
+        isPaused: false,
 
         init() {
             this.slides = document.querySelectorAll('.hero-slide');
@@ -28,10 +29,15 @@
             if (!dotsContainer) return;
 
             dotsContainer.innerHTML = '';
-            this.slides.forEach((_, index) => {
+            this.slides.forEach((slide, index) => {
                 const dot = document.createElement('button');
                 dot.className = 'hero-dot' + (index === 0 ? ' active' : '');
-                dot.setAttribute('aria-label', `Ir para slide ${index + 1}`);
+                
+                // Extrai o título do slide para o tooltip customizado
+                const slideTitle = slide.querySelector('.hero-title-slide')?.innerText || `Slide ${index + 1}`;
+                dot.setAttribute('aria-label', `Ir para slide: ${slideTitle}`);
+                dot.setAttribute('data-tooltip', slideTitle); // Usado pelo CSS para o tooltip bonito
+                
                 dot.addEventListener('click', () => this.goToSlide(index));
                 dotsContainer.appendChild(dot);
             });
@@ -78,10 +84,38 @@
             if (this.currentSlide === index) return;
             this.currentSlide = index;
             this.updateSlider();
-            this.resetAutoplay();
+            
+            // Pausa ao interagir manualmente se desejar, ou apenas reseta o tempo
+            if (!this.isPaused) {
+                this.resetAutoplay();
+            }
+        },
+
+        togglePause() {
+            const pauseBtn = document.getElementById('heroPause');
+            const pauseIcon = document.getElementById('pauseIcon');
+            const playIcon = document.getElementById('playIcon');
+
+            if (this.isPaused) {
+                // Play
+                this.isPaused = false;
+                this.startAutoplay();
+                if (pauseBtn) pauseBtn.setAttribute('aria-label', 'Pausar slider');
+                if (pauseIcon) pauseIcon.style.display = 'block';
+                if (playIcon) playIcon.style.display = 'none';
+            } else {
+                // Pause
+                this.isPaused = true;
+                this.stopAutoplay();
+                if (pauseBtn) pauseBtn.setAttribute('aria-label', 'Iniciar slider');
+                if (pauseIcon) pauseIcon.style.display = 'none';
+                if (playIcon) playIcon.style.display = 'block';
+            }
         },
 
         startAutoplay() {
+            if (this.isPaused) return;
+            this.stopAutoplay();
             this.autoplayInterval = setInterval(() => {
                 this.nextSlide();
             }, this.autoplayDelay);
@@ -95,6 +129,7 @@
         },
 
         resetAutoplay() {
+            if (this.isPaused) return;
             this.stopAutoplay();
             this.startAutoplay();
         },
@@ -103,6 +138,7 @@
             // Botões de navegação
             const prevBtn = document.getElementById('heroPrev');
             const nextBtn = document.getElementById('heroNext');
+            const pauseBtn = document.getElementById('heroPause');
 
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
@@ -118,6 +154,10 @@
                 });
             }
 
+            if (pauseBtn) {
+                pauseBtn.addEventListener('click', () => this.togglePause());
+            }
+
             // Teclado
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowLeft') {
@@ -127,6 +167,13 @@
                 if (e.key === 'ArrowRight') {
                     this.nextSlide();
                     this.resetAutoplay();
+                }
+                if (e.key === ' ') { // Espaço para pausar
+                    // Evita scroll da página ao apertar espaço
+                    if (document.activeElement === document.body || document.activeElement === pauseBtn) {
+                        e.preventDefault();
+                        this.togglePause();
+                    }
                 }
             });
 
